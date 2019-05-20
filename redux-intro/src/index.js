@@ -1,15 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider as ReduxProvider } from "react-redux";
-import configureStore from "./state/store";
-import App from "./views/App";
+import App from './App';
 
-const reduxStore = configureStore({ count: 0 });
-
-ReactDOM.render(
-  <ReduxProvider store={reduxStore}>
-    <App />
-  </ReduxProvider>,
-  document.getElementById("root")
-);
-
+ReactDOM.render(<App />, document.getElementById('root'));
