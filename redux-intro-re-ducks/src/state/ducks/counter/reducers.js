@@ -4,6 +4,7 @@ import types from "./types";
 // 
 function incrementCounter(counterState, action) {return counterState + 1}
 function decrementCounter(counterState, action) {return counterState - 1}
+function resetCounter(counterState, action) {return 0}
   
 // reducer
 function counterReducer(counterState = 0, action) {
@@ -12,6 +13,8 @@ function counterReducer(counterState = 0, action) {
         return incrementCounter(counterState, action)
       case types.DECREMENT:
         return decrementCounter(counterState, action)
+      case types.RESET:
+        return resetCounter(counterState, action)
       default:
         return counterState;
     }
